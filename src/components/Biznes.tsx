@@ -1,7 +1,9 @@
 import React from 'react';
+import Users from "./Users/Users";
 
 const Biznes = () => {
     return (
+        <div className="biznesParent">
         <div className="biznes">
             <div><h1>BETA TEST REGISTRATION</h1></div>
             <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corporis eius est, ex fugit
@@ -26,6 +28,8 @@ const Biznes = () => {
                     <button className="connect"> GET EARLY ACCESS</button>
                 </form>
             </div>
+        </div>
+            <Users/>
         </div>
     );
 };

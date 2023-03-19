@@ -1,0 +1,39 @@
+.title{
+
+}
+.data{
+    height: 500px;
+    background-color: #171719;
+    width: 600px;
+    overflow: auto;
+}
+.users{
+    margin-left: 184px;
+    margin-top: 100px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #171719;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #171719;
+}
+.hr{
+    width: 230%;
+}
+.delete{
+    background-color: #171719;
+    color: #FFFFFF;
+    border: none;
+}
+.onMouse{
+    color: rgba(231, 86, 38, 1);
+}

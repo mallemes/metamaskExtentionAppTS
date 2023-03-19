@@ -5,6 +5,7 @@
 
 body {
     background-color: #171719;
+    height: 1400px;
 }
 
 .navbar {
@@ -31,7 +32,7 @@ body {
     background: rgba(231, 86, 38, 1);
     color: #FFFFFF;
     font-size: 12px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', serif;
     padding: 5px;
 
     line-height: 120%;
@@ -51,7 +52,7 @@ body {
     height: 120px;
     left: 64px;
     top: 260px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 90px;
@@ -67,12 +68,7 @@ img{
     left: 727px;
     top: 209px;
 }
-.biznes{
-    width: 30%;
-    margin-left: 64px;
-    margin-top: 100px;
 
-}
 h1{
     color: rgba(231, 86, 38, 1);
 }
@@ -224,6 +220,16 @@ p{
 }
 .items{
     margin-top: 20px;
+}
+.biznesParent{
+    display: flex;
+
+}
+.biznes{
+    width: 30%;
+    margin-left: 64px;
+    margin-top: 100px;
+
 }
 
 
