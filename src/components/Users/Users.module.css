@@ -1,10 +1,7 @@
-.title{
-
-}
 .data{
     height: 500px;
     background-color: #171719;
-    width: 600px;
+    width: 620px;
     overflow: auto;
 }
 .users{
@@ -35,5 +32,8 @@ tr:nth-child(even) {
     border: none;
 }
 .onMouse{
+    /*color: rgba(231, 86, 38, 1);*/
+}
+.onMouseActive{
     color: rgba(231, 86, 38, 1);
 }

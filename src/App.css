@@ -1,13 +1,11 @@
-.App {
-    background-color: #171719;
-    color: #FFFFFF;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
     background-color: #171719;
     height: 1400px;
-}
+    color: #FFFFFF;
 
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -25,21 +23,13 @@ body {
 .connect {
     height: 39px;
     width: 171px;
-    /*left: 1215px;*/
-    /*top: 17px;*/
     border-radius: 30px;
-    /*padding: 10px 24px 7px 24px;*/
     background: rgba(231, 86, 38, 1);
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 18px;
     font-family: 'Bebas Neue', serif;
     padding: 5px;
-
     line-height: 120%;
-}
-
-.Main {
-
 }
 .mainContent{
     margin-top: 260px;
@@ -47,26 +37,27 @@ body {
 }
 
 .text {
-    /* Explore Your own planet */
+    position: relative;
     width: 1007px;
     height: 120px;
-    left: 64px;
-    top: 260px;
-    font-family: 'Bebas Neue', serif;
+    font-family: 'Bebas Neue';
     font-style: normal;
     font-weight: 700;
-    font-size: 90px;
     line-height: 120%;
     color: #FFFFFF;
-    z-index: 21332343;
+    left: 0;
+    top: -20px;
+    font-size: 110px;
+    line-height: 120%;
+    z-index: 1000;
 }
-
 img{
     position: absolute;
     width: 320px;
     height: 322px;
     left: 727px;
     top: 209px;
+    
 }
 
 h1{
@@ -77,17 +68,12 @@ p{
 }
 .roadMap{
     position: absolute;
-
     left: 1097px;
     top: 319px;
 }
 .san{
     color: rgba(231, 86, 38, 1);
 }
-
-
-/* KEYFRAMES */
-
 @keyframes spin {
     from {
         transform: rotate(0);
@@ -96,7 +82,6 @@ p{
         transform: rotate(359deg);
     }
 }
-
 @keyframes spin3D {
     from {
         transform: rotate3d(.5,.5,.5, 360deg);
@@ -105,7 +90,6 @@ p{
         transform: rotate3d(.5,.5,.5, 0deg);
     }
 }
-
 @keyframes configure-clockwise {
     0% {
         transform: rotate(0);
@@ -153,10 +137,7 @@ p{
     }
 }
 
-
-
 .circle-border {
-    z-index: 0;
     position: absolute;
     left: 707px;
     top: 190px;
@@ -231,7 +212,3 @@ p{
     margin-top: 100px;
 
 }
-
-
-
-
