@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import IndexPage from "./components/IndexPage";
+import Header from "./components/Header";
+import {Route, Routes} from 'react-router-dom';
+import Profile from "./components/Profile";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <Routes>
+                <Route path='/' element={<IndexPage/>}/>
+                <Route path='/profile' element={<Profile/>}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
+
+
+//https://medium.com/coinmonks/connect-browser-wallet-with-usedapp-f090212eb882 connect metamask

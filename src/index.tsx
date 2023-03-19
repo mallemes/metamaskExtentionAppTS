@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { DAppProvider, Rinkeby } from '@usedapp/core';
+import { getDefaultProvider } from 'ethers';
+import {BrowserRouter} from "react-router-dom";
+
+const config = {
+    readOnlyChainId: Rinkeby.chainId,
+    readOnlyUrls: {
+        [Rinkeby.chainId]: getDefaultProvider('rinkeby'),
+    },
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <DAppProvider config={config}>
+          <BrowserRouter>
+              <App/>
+          </BrowserRouter>
+      </DAppProvider>
   </React.StrictMode>
 );
 

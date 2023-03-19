@@ -1,38 +1,231 @@
 .App {
-  text-align: center;
+    background-color: #171719;
+    color: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #171719;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 64px 10px 64px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    width: 199px;
+    height: 44px;
+    background-color: rgba(90, 90, 90, 1);
+    color: rgba(255, 255, 255, 1);
+    border: aliceblue dashed 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.connect {
+    height: 39px;
+    width: 171px;
+    /*left: 1215px;*/
+    /*top: 17px;*/
+    border-radius: 30px;
+    /*padding: 10px 24px 7px 24px;*/
+    background: rgba(231, 86, 38, 1);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: 'Bebas Neue';
+    padding: 5px;
+
+    line-height: 120%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Main {
+
 }
+.mainContent{
+    margin-top: 260px;
+    margin-left: 64px;
+}
+
+.text {
+    /* Explore Your own planet */
+    width: 1007px;
+    height: 120px;
+    left: 64px;
+    top: 260px;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 120%;
+    color: #FFFFFF;
+    z-index: 21332343;
+}
+
+img{
+    position: absolute;
+    width: 320px;
+    height: 322px;
+    left: 727px;
+    top: 209px;
+}
+.biznes{
+    width: 30%;
+    margin-left: 64px;
+    margin-top: 100px;
+
+}
+h1{
+    color: rgba(231, 86, 38, 1);
+}
+p{
+    color: #FFFFFF;
+}
+.roadMap{
+    position: absolute;
+
+    left: 1097px;
+    top: 319px;
+}
+.san{
+    color: rgba(231, 86, 38, 1);
+}
+
+
+/* KEYFRAMES */
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin3D {
+    from {
+        transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+        transform: rotate3d(.5,.5,.5, 0deg);
+    }
+}
+
+@keyframes configure-clockwise {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes configure-xclockwise {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-135deg);
+    }
+    75% {
+        transform: rotate(-225deg);
+    }
+    100% {
+        transform: rotate(-315deg);
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: .25;
+        transform: scale(.75);
+    }
+}
+
+
+
+.circle-border {
+    z-index: 0;
+    position: absolute;
+    left: 707px;
+    top: 190px;
+    width: 350px;
+    height: 350px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(231, 86, 38, 1);
+    background: linear-gradient(0deg, rgba(241, 102, 102, 0.1) 33%, rgba(231, 86, 38, 1) 100%);
+    animation: spin .8s linear 0s infinite;
+}
+
+.circle-core {
+    width: 100%;
+    height: 100%;
+    background-color: #171719;
+    border-radius: 50%;
+}
+
+.p1{
+    width: 30%;
+}
+
+.formInput{
+    height: 38px;
+    width: 401px;
+    border: #FFFFFF solid 1px;
+    border-radius: 30px;
+    padding: 12px 120px 12px 18px;
+    background-color: #171719;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-size: 28px;
+
+}
+.planet{
+    position: absolute;
+    left: 397px;
+    bottom: 630px;
+}
+.ProfileTitle{
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+.personalData{
+    padding-left: 64px;
+    padding-top: 60px;
+}
+.data{
+    margin-top: 40px;
+}
+.field{
+    color:  rgba(231, 86, 38, 1);
+    font-size: 20px;
+}
+.items{
+    margin-top: 20px;
+}
+
+
+
+

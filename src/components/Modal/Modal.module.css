@@ -1,0 +1,35 @@
+.modal{
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal__content{
+    padding: 20px;
+    background: rgba(38, 38, 40, 1);
+    height: 260px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.active{
+
+
+}
+.title{
+ margin-top: 30px;
+}
+.content{
+    margin-top: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
