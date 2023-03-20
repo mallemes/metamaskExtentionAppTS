@@ -21,6 +21,10 @@ body {
     background-color: rgba(90, 90, 90, 1);
     color: rgba(255, 255, 255, 1);
     border: aliceblue dashed 1px;
+
+}
+.link{
+    text-decoration: none;
 }
 
 .connect {
@@ -214,4 +218,10 @@ p{
     margin-left: 64px;
     margin-top: 100px;
 
+}
+.registerField{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgba(231, 86, 38, 1);
+    font-size: 38px;
 }

@@ -13,17 +13,17 @@ const config = {
         [Rinkeby.chainId]: getDefaultProvider('rinkeby'),
     },
 }
-
 function App() {
-    const [currentUser, setCurrentUser] = useState(null as usersType|null)
-    console.log(currentUser)
+    const [account, setAccount ] = useState('');
+    const defUser = {id:123, email:"email", username:"name", address:account?account:"???????????????????"}
+    const [currentUser, setCurrentUser] = useState<usersType>(defUser)
     return (
         <div className="App">
-            {/*<DAppProvider config={config}>*/}
-                <Header/>
-            {/*</DAppProvider>*/}
+            <DAppProvider config={config}>
+                <Header setAccount={setAccount} />
+            </DAppProvider>
             <Routes>
-                <Route path='/' element={<IndexPage setUser={setCurrentUser}/>}/>
+                <Route path='/' element={<IndexPage account={account} setUser={setCurrentUser}/>}/>
                 <Route path='/profile'  element={<Profile user={currentUser}/>}/>
             </Routes>
         </div>

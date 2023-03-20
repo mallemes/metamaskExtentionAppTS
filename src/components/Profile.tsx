@@ -2,13 +2,9 @@ import React from 'react';
 import planet from "../planet.png";
 import {usersType} from "../API/api";
 type props ={
-    user: usersType|null
+    user: usersType
 }
 const Profile = (props:props) => {
-    localStorage.clear()
-    if (!props.user)
-        return <div></div>
-
     return (
         <div>
          <div className="personalData">

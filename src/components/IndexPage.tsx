@@ -5,6 +5,7 @@ import Biznes from "./Biznes";
 
 type callback ={
     setUser : any
+    account:any
 }
 const IndexPage = (props:callback) => {
     const [active, setActive] = useState(true)
@@ -13,7 +14,7 @@ const IndexPage = (props:callback) => {
         < >
             <Modal active={active} setActive={setActive}/>
             <Main/>
-            <Biznes setUser={props.setUser}/>
+            <Biznes setUser={props.setUser} account={props.account}/>
         </>
     );
 };

@@ -1,42 +1,28 @@
-import React, {useEffect, useState} from 'react';
-import {getUsers, usersType} from "../../API/api";
+import React from 'react';
 import style from './Users.module.css'
+import {usType} from "../Biznes";
 
-const Users = () => {
+const Users = (props:{users:usType,setUsers:any}) => {
     const shortenAddress = (addr: any) => `${addr.slice(0, 4)}...${addr.slice(-4)}`;
-    type usType = {
-        myUsers: null | Array<usersType>,
-        active: null | usersType
-    }
-    const [users, setUsers] = useState<usType>({myUsers: null, active: null})
-    useEffect(() => {
-        async function fetchData() {
 
-            const data = (await getUsers().then<Array<usersType>>())
-            setUsers({...users, myUsers: data})
-        }
-
-        fetchData().then();
-    }, []);
-
-    if (!users.myUsers)
+    if (!props.users.myUsers)
         return <div></div>
 
     const delUser = (id: number) => {
-        if (users.myUsers)
-            setUsers({...users, myUsers: users.myUsers.filter(u => u.id !== id)})
+        if (props.users.myUsers)
+            props.setUsers({...props.users, myUsers: props.users.myUsers.filter((u: { id: number; }) => u.id !== id)})
     }
     const setClass = (index: number) => {
-        if (users.myUsers && users.active)
-            if (users.myUsers[index] === users.active)
+        if (props.users.myUsers && props.users.active)
+            if (props.users.myUsers[index] === props.users.active)
                 return "Active"
             else return ""
     }
     const toggleActive = (index: number, toggle: boolean = true) => {
-        if (users.myUsers)
-            setUsers({...users, active: users.myUsers[index]})
+        if (props.users.myUsers)
+            props.setUsers({...props.users, active: props.users.myUsers[index]})
         if (!toggle)
-            setUsers({...users, active: null})
+            props.setUsers({...props.users, active: null})
     }
 
 
@@ -57,7 +43,7 @@ const Users = () => {
                         <th>WALLET</th>
                     </tr>
                     </thead>
-                    {users.myUsers.map((user, index) => {
+                    {props.users.myUsers.map((user, index) => {
                             return (
                                 <tbody key={user.id}>
                                 <tr onMouseMove={() => toggleActive(index)}
@@ -74,8 +60,6 @@ const Users = () => {
                         }
                     )}
                 </table>
-
-
             </div>
         </div>
     );
