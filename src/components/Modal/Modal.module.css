@@ -1,5 +1,5 @@
 .modal{
-    z-index: 1000;
+    z-index: 10000;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.5);

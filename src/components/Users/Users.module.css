@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .data{
     height: 500px;
     background-color: #171719;
@@ -17,23 +19,40 @@ table {
 td, th {
     border: 1px solid #171719;
     text-align: left;
-    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 tr:nth-child(even) {
     background-color: #171719;
 }
-.hr{
+hr{
     width: 230%;
+
 }
 .delete{
     background-color: #171719;
     color: #FFFFFF;
     border: none;
+    font-size: 24px;
+
 }
-.onMouse{
-    /*color: rgba(231, 86, 38, 1);*/
-}
-.onMouseActive{
+
+.Active{
     color: rgba(231, 86, 38, 1);
+}
+thead{
+    border: #FFFFFF solid 2px;
+    border-left: #171719;
+    border-right: #171719;
+}
+tbody{
+    border: #FFFFFF solid 2px;
+    border-left: #171719;
+    border-right: #171719;
+
+}
+.title{
+    font-family: 'Bebas Neue';
+    font-size: 28px;
 }

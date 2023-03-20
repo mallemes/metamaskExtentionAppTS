@@ -1,6 +1,6 @@
 import React from 'react';
 import {useEthers} from "@usedapp/core";
-const shortenAddress = (addr:any) => `${addr.slice(0, 5)}...${addr.slice(-4)}`;
+const shortenAddress = (addr:string) => `${addr.slice(0, 5)}...${addr.slice(-4)}`;
 
 
 const Header = () => {
@@ -16,4 +16,5 @@ const Header = () => {
     );
 };
 
-export default Header;
+
+export default React.memo(Header);

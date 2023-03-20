@@ -6,6 +6,9 @@ body {
     color: #FFFFFF;
 
 }
+.Active{
+    color: rgba(231, 86, 38, 1);
+}
 .navbar {
     display: flex;
     justify-content: space-between;
