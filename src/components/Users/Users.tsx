@@ -15,8 +15,10 @@ const Users = () => {
             const data = (await getUsers().then<Array<usersType>>())
             setUsers({...users, myUsers: data})
         }
+
         fetchData().then();
     }, []);
+
     if (!users.myUsers)
         return <div></div>
 
@@ -30,12 +32,14 @@ const Users = () => {
                 return "Active"
             else return ""
     }
-    const toggleActive = (index: number, toggle:boolean=true) => {
+    const toggleActive = (index: number, toggle: boolean = true) => {
         if (users.myUsers)
             setUsers({...users, active: users.myUsers[index]})
-        if(!toggle)
+        if (!toggle)
             setUsers({...users, active: null})
     }
+
+
     return (
         <div className={style.users}>
             <div className={style.title}>
@@ -56,10 +60,11 @@ const Users = () => {
                     {users.myUsers.map((user, index) => {
                             return (
                                 <tbody key={user.id}>
-                                <tr onMouseMove={() => toggleActive(index)} className={setClass(index)} onMouseOut={()=>toggleActive(index, false)}>
-                                    <td>{user.username}</td>
-                                    <td>{user.email}</td>
-                                    <td>{shortenAddress(user.address)}
+                                <tr onMouseMove={() => toggleActive(index)}
+                                    className={setClass(index)} onMouseOut={() => toggleActive(index, false)}>
+                                    <td  >{user.username}</td>
+                                    <td  >{user.email}</td>
+                                    <td  style={{width:"105%"}}>{shortenAddress(user.address)}
                                         {setClass(index) ? <button className={style.delete}
                                                                    onClick={() => delUser(user.id)}>X</button> : ""}
                                     </td>

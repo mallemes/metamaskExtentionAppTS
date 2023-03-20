@@ -1,7 +1,14 @@
 import React from 'react';
 import planet from "../planet.png";
+import {usersType} from "../API/api";
+type props ={
+    user: usersType|null
+}
+const Profile = (props:props) => {
+    localStorage.clear()
+    if (!props.user)
+        return <div></div>
 
-const Profile = () => {
     return (
         <div>
          <div className="personalData">
@@ -11,15 +18,15 @@ const Profile = () => {
              <div className="data">
                  <div className="items">
                      <div>NAME</div>
-                     <div><span className="field">ERJAN</span></div>
+                     <div><span className="field">{props.user.username}</span></div>
                  </div>
                  <div className="items">
                      <div>EMAIL</div>
-                     <div><span className="field">TALGAR</span></div>
+                     <div><span className="field">{props.user.email}</span></div>
                  </div>
                  <div className="items">
                      <div>WALLET</div>
-                     <div><span className="field">OZBEK</span></div>
+                     <div><span className="field">{props.user.address}</span></div>
                  </div>
              </div>
          </div>

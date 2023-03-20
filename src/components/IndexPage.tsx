@@ -3,14 +3,17 @@ import Modal from "./Modal/Modal";
 import Main from "./Main";
 import Biznes from "./Biznes";
 
-const IndexPage = () => {
+type callback ={
+    setUser : any
+}
+const IndexPage = (props:callback) => {
     const [active, setActive] = useState(true)
 
     return (
         < >
             <Modal active={active} setActive={setActive}/>
             <Main/>
-            <Biznes/>
+            <Biznes setUser={props.setUser}/>
         </>
     );
 };

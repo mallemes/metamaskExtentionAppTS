@@ -7,7 +7,7 @@ export type usersType = {
     address: string
 
 }
-type responseType = {
+type getUsersResponseType = {
 
     meta: {
     currentPage: number,
@@ -16,4 +16,6 @@ type responseType = {
 },
     items: Array<usersType>
 }
-export const getUsers = (page: number = 0, perPage: number = 20) => axios.get<responseType>(`https://new-backend.unistory.app/api/data?page=${page}&perPage=${perPage}`).then(response => response.data.items)
+
+export const getUsers = (page: number = 0, perPage: number = 20) => axios.get<getUsersResponseType>(`https://new-backend.unistory.app/api/data?page=${page}&perPage=${perPage}`).then(response => response.data.items)
+export const userProfileAPI = (userId:number) => axios.get<usersType>(`https://new-backend.unistory.app/api/data/id/${userId}`).then(response =>response.data)
